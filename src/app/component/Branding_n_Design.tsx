@@ -6,12 +6,12 @@ import { IoIosArrowRoundDown, IoIosArrowRoundForward } from "react-icons/io";
 
 export default function Branding_n_Design() {
 	return (
-		<div className="mx-auto max-w-[900px] min-h-[calc(100vh-70px)] py-8 flex flex-col md:flex-row justify-center items-center gap-20 md:gap-16">
+		<div className="mx-auto max-w-[900px] min-h-[calc(100vh-70px)] py-8 flex flex-col md:flex-row-reverse justify-center items-center gap-20 md:gap-16">
 			<div className="text-center md:text-left">
 				<h1 className="text-3xl md:text-5xl font-bold capitalize ">
 					Branding & Design system
 				</h1>
-				<p className="py-5 text-base md:text-2xl capitalize px-10 md:px-0">
+				<p className="py-5 text-xl md:text-2xl capitalize my-4 md:my-0 px-10 md:px-0">
 					Commonly used in the graphic, print & publishing industris for
 					previewing visual layout and mockups{" "}
 				</p>

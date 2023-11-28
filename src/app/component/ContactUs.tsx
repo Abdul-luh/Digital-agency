@@ -1,27 +1,27 @@
 import Image from "next/image";
 import React from "react";
-import designerteam from "../../../public/images/main images/designer-team-working-on-creative-design.png";
+import customerSupport from "../../../public/images/main images/customer-support.png";
 import { motion } from "framer-motion";
 import { IoIosArrowRoundDown, IoIosArrowRoundForward } from "react-icons/io";
 
 export default function ContactUs() {
 	return (
-		<div className="mx-auto max-w-[900px] min-h-[calc(100vh-70px)] py-8 flex flex-col md:flex-row justify-center items-center gap-20 md:gap-16">
+		<div className="mx-5 md:mx-auto max-w-[900px] min-h-[calc(100vh-180px)] bg-[#F6F6F6] px-3 py-3 rounded-xl flex flex-col md:flex-row-reverse justify-center items-center my-16 gap-20 md:gap-16">
 			<div className="text-center md:text-left">
-				<h1 className="text-3xl md:text-5xl font-bold capitalize ">
-					Branding & Design system
+				<h1 className="text-4xl md:text-5xl font-bold capitalize ">
+					Be a part of the next big thing
 				</h1>
-				<p className="py-5 text-base md:text-2xl capitalize px-10 md:px-0">
-					Commonly used in the graphic, print & publishing industris for
-					previewing visual layout and mockups{" "}
+				<p className="py-5 text-xl md:text-2xl capitalize px-10 md:px-0">
+					We work with Brans, Startups, to SMEs. Colaborate for more impact and
+					growth{" "}
 				</p>
-				<div className={"flex justify-center items-center md:justify-start"}>
-					<IoIosArrowRoundDown className={"md:hidden"} size={30} />
-					<IoIosArrowRoundForward className={"hidden md:block"} size={30} />
-				</div>
+				<button className="bg-[#8EADD5] text-white font-semibold uppercase py-2 px-4 rounded-md">
+					{" "}
+					contact us
+				</button>
 			</div>
 
-			<div className="">
+			<div className="hidden md:block">
 				<motion.div
 					initial={{ opacity: 0, scale: 0 }} // Initial animation state
 					// animate={{ opacity: 1, scale: 1 }} // Animation to apply when rendered
@@ -37,7 +37,7 @@ export default function ContactUs() {
 					}} // Animation duration
 					whileInView={{ opacity: 1, scale: 1 }}>
 					{/* Your content here */}
-					<Image src={designerteam} alt="hero" width={700} height={700} />
+					<Image src={customerSupport} alt="hero" width={700} height={700} />
 				</motion.div>
 			</div>
 		</div>

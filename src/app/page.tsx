@@ -6,6 +6,8 @@ import TrustedCompanies from "./component/TrustedCompanies";
 import Branding_n_Design from "./component/Branding_n_Design";
 import Custom_n_PluginDevelopment from "./component/Custom_n_PluginDevelopment";
 import Testimonials from "./component/Testimonials";
+import ContactUs from "./component/ContactUs";
+import Footer from "./component/Footer";
 
 export default function Home() {
 	return (
@@ -181,6 +183,8 @@ export default function Home() {
 			</div>
 
 			<Testimonials />
+			<ContactUs />
+			<Footer />
 		</main>
 	);
 }
