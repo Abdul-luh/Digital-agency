@@ -8,8 +8,10 @@ export default function Navbar() {
 
 	return (
 		<div className="mx-auto max-w-[900px] z-10">
-			<nav className="flex justify-between items-center py-4 md:px-5">
-				<p className="uppercase text-3xl font-semibold">Digital agency</p>
+			<nav className="flex justify-between items-center py-4 px-5">
+				<p className="uppercase text-xl md:text-2xl font-semibold">
+					Digital agency
+				</p>
 				<ul className="hidden justify-center items-center gap-5 md:flex">
 					<li className="capitalize">home</li>
 					<li className="capitalize">about</li>
@@ -31,10 +33,18 @@ export default function Navbar() {
 							// onClick={() => setOpen(!open)}
 						/>
 
-						<li className="capitalize">home</li>
-						<li className="capitalize">about</li>
-						<li className="capitalize">testimonial</li>
-						<li className="capitalize">contact</li>
+						<li className="capitalize cursor-pointer font-bold ease-in duration-200">
+							home
+						</li>
+						<li className="capitalize cursor-pointer font-bold ease-in duration-200">
+							about
+						</li>
+						<li className="capitalize cursor-pointer font-bold ease-in duration-200">
+							testimonial
+						</li>
+						<li className="capitalize cursor-pointer font-bold ease-in duration-200">
+							contact
+						</li>
 					</ul>
 				</div>
 			</nav>
