@@ -1,49 +1,64 @@
 import Image from "next/image";
 import React from "react";
-import businessDataAnalysis from "../../../public/images/main images/businessman-analyzing-data.png";
+import blackWoman from "../../../public/images/black-woman-4975941-4159827 1.png";
+import asianWoman from "../../../public/images/asian-woman-4975941-4159827 1.png";
+import westernMan from "../../../public/images/western-man-4975941-4159827 1.png";
 import { motion } from "framer-motion";
-import { IoIosArrowRoundDown, IoIosArrowRoundForward } from "react-icons/io";
+import { StaticImageData } from "next/image";
+
+interface TestimonialsProps {
+	fullname: string;
+	image: StaticImageData;
+	comment: string;
+}
 
 export default function Testimonials() {
+	const testimonials: TestimonialsProps[] = [
+		{
+			fullname: "Andrew Rathore",
+			image: westernMan,
+			comment:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. ",
+		},
+		{
+			fullname: "Vera Duncan",
+			image: asianWoman,
+			comment:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. ",
+		},
+		{
+			fullname: "Mark Smith",
+			image: blackWoman,
+			comment:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. ",
+		},
+	];
 	return (
-		<div className="mx-auto max-w-[900px] min-h-[calc(100vh-70px)] py-8 flex flex-col md:flex-row-reverse justify-center items-center gap-20 md:gap-16">
-			<div className="text-center md:text-left">
-				<h1 className="text-3xl md:text-5xl font-bold capitalize ">
-					Custome & Plugin Development{" "}
-				</h1>
-				<p className="py-5 text-base md:text-2xl capitalize px-10 md:px-0">
-					Commonly used in the graphic, print & publishing industris for
-					previewing visual layout and mockups
-				</p>
-				<div className="flex justify-center items-center md:justify-start">
-					<IoIosArrowRoundDown className={"md:hidden"} size={30} />
-					<IoIosArrowRoundForward className={"hidden md:block"} size={30} />
-				</div>
-			</div>
+		<div className="mx-auto max-w-[900px] min-h-screen py-8 flex flex-col md:flex-row-reverse justify-center items-center gap-20 md:gap-16">
+			<p className=" text-sm uppercase">TESTIMONIALS</p>
+			<h2 className="capitalize font-bold max-w-sm">
+				Read What Other have to Say
+			</h2>
 
-			<div className="">
-				<motion.div
-					initial={{ opacity: 0, scale: 0 }} // Initial animation state
-					// animate={{ opacity: 1, scale: 1 }} // Animation to apply when rendered
-					transition={{
-						duration: 0.3,
-						ease: [0, 0.71, 0.2, 1.01],
-						scale: {
-							type: "spring",
-							damping: 5,
-							stiffness: 100,
-							restDelta: 0.001,
-						},
-					}} // Animation duration
-					whileInView={{ opacity: 1, scale: 1 }}>
-					{/* Your content here */}
-					<Image
-						src={businessDataAnalysis}
-						alt="hero"
-						width={700}
-						height={700}
-					/>
-				</motion.div>
+			<div className="grid grid-cols-3">
+				{testimonials.map((testimonial: TestimonialsProps) => (
+					<div
+						key={testimonial.fullname}
+						className="bg-[#F6F6F6] rounded-xl flex justify-center items-center">
+						<div className="w-[300px] h-[300px] relative rounded-full">
+							<Image
+								src={testimonial.image}
+								alt={testimonial.fullname}
+								layout="fill"
+								objectFit="cover"
+							/>
+						</div>
+						<div className="p-8">
+							<p className="text-sm font-bold">{testimonial.fullname}</p>
+							<p className="text-sm">{testimonial.comment}</p>
+						</div>
+					</div>
+				))}
 			</div>
 		</div>
 	);

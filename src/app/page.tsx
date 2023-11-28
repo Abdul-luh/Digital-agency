@@ -6,6 +6,7 @@ import elipsis1 from "../../public/images/asian-woman-4975939-4159825 1.png";
 import TrustedCompanies from "./component/TrustedCompanies";
 import Branding_n_Design from "./component/Branding_n_Design";
 import Custom_n_PluginDevelopment from "./component/Custom_n_PluginDevelopment";
+import Testimonials from "./component/Testimonials";
 
 export default function Home() {
 	return (
@@ -179,6 +180,8 @@ export default function Home() {
 				</div>
 				<Custom_n_PluginDevelopment />
 			</div>
+
+			<Testimonials />
 		</main>
 	);
 }
